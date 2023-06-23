@@ -1,0 +1,5 @@
+struct sock *sk = NULL;
+	struct unix_sock *u;
+	atomic_long_inc(&unix_nr_socks);
+    add
+	if (atomic_long_read(&unix_nr_socks) > 2 * get_max_files())
